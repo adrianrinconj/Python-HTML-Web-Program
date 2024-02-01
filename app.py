@@ -6,27 +6,30 @@ from flask import Flask, render_template, request, redirect, url_for
 # https://sparkdatabox.com/tutorials/python-flask/get-and-post-methods-in-flask
 # https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
+# sets app variable to create the instance of Flask so that it can run
 app = Flask(__name__)
 
-
+# returns to the login page
 @app.route('/')
 def login():
     return render_template('login_page.html')
 
 
+# this is where my post and method actions are
 @app.route('/submit', methods=['POST', 'GET'])
 def submit():
     if request.method == 'POST':
-        # Process data from the form
+        # gets data from the form section of login_page.html
         username = request.form['username']
         password = request.form['password']
 
-        # Redirect to the success page
+        # redirects to the success page
         return redirect(url_for('success_page', username=username))
     else:
         # redirects to the home page
         return redirect(url_for('login'))
 
+# redirects to the html page with the buttons and links
 @app.route('/success/<username>')
 def success_page(username):
     return render_template('diff_page.html', username=username)
