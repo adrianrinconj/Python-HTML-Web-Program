@@ -15,7 +15,7 @@ def login():
     return render_template('login_page.html')
 
 
-# this is where my post and method actions are
+# this is where my post and get actions are
 @app.route('/submit', methods=['POST', 'GET'])
 def submit():
     if request.method == 'POST':
