@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+        <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #ddd;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #ff9933;
+        }
+        </style>
+</head>
+<body>
+    <h1></h1>
+
+    <form action="{{ url_for('submit') }}" method="post">
+
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>

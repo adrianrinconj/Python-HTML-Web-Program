@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs n stuff</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1a1a1a;
+            color: #ddd;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #ff9933;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-button {
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-button:hover {
+            transform: scale(1.05);
+        }
+
+        .image-button img {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Success! Welcome {{username}}</h1>
+    <h1>Pick a Song</h1>
+
+
+    <div class="button-container">
+        <div class="image-button" onclick="location.href='https://www.youtube.com/watch?v=8wUXSmg376E&pp=ygUPY2FtYSB5IG1lc2EgbWl4';">
+            <img src="https://www.billboard.com/wp-content/uploads/2020/09/Carlos-Santana-jan-2020-a-billboard-1548-1599601857.jpg?w=942&h=623&crop=1" alt="One of the Carlos">
+        </div>
+
+        <div class="image-button" onclick="location.href='https://www.youtube.com/watch?v=0VGjV8Suyvg&pp=ygULZG8gZm9yIGxvdmU%3D';">
+            <img src="https://s.abcnews.com/images/Entertainment/GTY-tupac-shakur-tty-10-jef-170615_1_16x9_992.jpg?w=384" alt="What you won't do. Do for love. You tried everything, but you won't give up">
+        </div>
+
+        <div class="image-button" onclick="location.href='https://www.youtube.com/watch?v=qYcoJpqCha4&pp=ygUOYXJ1YXJpYW4gZGFuY2U%3D';">
+            <img src="https://i.ytimg.com/vi/m4fDm4rdUdk/maxresdefault.jpg" alt="Check this one out. When I started music producing, I tried to make my beats like his">
+        </div>
+        <div class="image-button" onclick="location.href='https://www.youtube.com/watch?v=xQFls1FwG-4&pp=ygUWa2luZyB0aGVtZSByaW5nIGEgYmVsbA%3D%3D';">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkAGDea4tDeZEbaBInDsZ1gBHxev2-Pq7qBQ&usqp=CAU" alt="Bob Nye the Builder guy">
+        </div>
+    </div>
+
+    <p>Any Song...</p>
+</body>
+</html>
